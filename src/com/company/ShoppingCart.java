@@ -44,6 +44,8 @@ public class ShoppingCart
             throw new IllegalArgumentException("Illegal quantity");
         if (items.size() == 99)
             throw new IndexOutOfBoundsException("No more space in cart");
+        if (type < ITEM_REGULAR || type > ITEM_FOR_SALE)
+            throw new IllegalArgumentException("Illegal type");
         Item item = new Item();
         item.title = title;
         item.price = price;

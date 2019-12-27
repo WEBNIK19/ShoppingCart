@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ca3b4a2-55dd-4a23-9f20-7186bd463bfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/DiscountInvalidTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/company/DiscountValidTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/company/DiscountValidTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/DiscountValidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DiscountValidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ShoppingCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AddItemTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ShoppingCart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="782">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
               <folding>
                 <element signature="e#1959#1960#0" expanded="true" />
                 <element signature="e#1987#1988#0" expanded="true" />
@@ -29,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/DiscountInvalidTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="357">
+              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,13 +39,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ShoppingCartTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/AddItemTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="170">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#783#784#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/DiscountValidTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="272">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,10 +81,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/com/company/DiscountTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/DiscountValidTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/DiscountInvalidTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ShoppingCart.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ShoppingCartTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/AddItemTest.java" />
       </list>
     </option>
   </component>
@@ -135,7 +137,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577446022799" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577451552392" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -165,12 +167,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DiscountInvalidTest">
+  <component name="RunManager" selected="JUnit.AddItemTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ShoppingCart" />
       <module name="ShoppingCart" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddItemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShoppingCart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.AddItemTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,34 +237,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShoppingCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShoppingCart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.ShoppingCartTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.DiscountTest" />
-      <item itemvalue="JUnit.ShoppingCartTest" />
+      <item itemvalue="JUnit.AddItemTest" />
       <item itemvalue="JUnit.DiscountValidTest" />
       <item itemvalue="JUnit.DiscountInvalidTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddItemTest" />
         <item itemvalue="JUnit.DiscountInvalidTest" />
         <item itemvalue="JUnit.DiscountValidTest" />
         <item itemvalue="JUnit.DiscountTest" />
-        <item itemvalue="JUnit.ShoppingCartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -272,35 +274,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DiscountTest - 2019.12.27 at 12h 41m 14s.xml">
-      <configuration name="DiscountTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 52m 11s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountTest - 2019.12.27 at 12h 52m 23s.xml">
-      <configuration name="DiscountTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 52m 28s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 12h 52m 40s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 52m 45s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 12h 56m 05s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 54m 12s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 13h 07m 00s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 54m 32s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 13h 08m 28s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 54m 41s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 13h 08m 56s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 55m 01s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 13h 10m 19s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 56m 53s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountValidTest - 2019.12.27 at 13h 11m 36s.xml">
-      <configuration name="DiscountValidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 57m 19s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DiscountInvalidTest - 2019.12.27 at 13h 24m 45s.xml">
-      <configuration name="DiscountInvalidTest" configurationId="JUnit" />
+    <history-entry file="ShoppingCartTest - 2019.12.27 at 14h 57m 51s.xml">
+      <configuration name="ShoppingCartTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -317,7 +319,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4022663" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,27 +416,6 @@
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1570517062164" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/ShoppingCartTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ShoppingCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/builders/JUnit4Builder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -444,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DiscountValidTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="272">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -454,10 +435,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DiscountInvalidTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="357">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ShoppingCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+          <folding>
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1987#1988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/AddItemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
           </folding>
         </state>
       </provider>
