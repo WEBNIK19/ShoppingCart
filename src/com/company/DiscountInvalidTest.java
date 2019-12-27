@@ -1,6 +1,5 @@
 package com.company;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -11,41 +10,36 @@ import java.util.Random;
 import static org.junit.Assert.*;
 @RunWith(value = Parameterized.class)
 public class DiscountInvalidTest {
-    private int quantity;
-    private int type;
+    private Item item;
     private double expected;
-    private ShoppingCart cart;
-    @Before
-    public void initialize(){
-        this.cart = new ShoppingCart();
-    }
 
-    public DiscountInvalidTest(int type) {
+
+    public DiscountInvalidTest(Item item) {
         Random r = new Random();
-        this.type = type;
-        this.quantity = r.nextInt(99) + 1;
-        this.expected = getExpected(type,quantity);
+        item.setQuantity(r.nextInt(99) + 1);
+        this.item = item;
+        this.expected = getExpected(item);
     }
 
-    public static double getExpected(int type, int quantity){
+    public static double getExpected(Item item){
         double dis = 0;
         Random r = new Random();
         double rand = 0.0;
-        switch (type) {
-            case ShoppingCart.ITEM_REGULAR:
-                dis = (dis + (quantity / 100) * 0.1 - 0.8 < 0) ? (dis + (quantity / 100) * 0.1) :  0.8;
-                break;
-            case ShoppingCart.ITEM_SECOND_FREE:
-                dis = (((quantity > 1) ? 1 : 0) * 0.5);
-                dis = (dis + (quantity / 100) * 0.1 - 0.8 < 0) ? (dis + (quantity / 100) * 0.1) :  0.8;
-                break;
-            case ShoppingCart.ITEM_DISCOUNT:
-                dis = (0.1 + ( quantity / 10) * 0.1 - 0.5 < 0) ? (0.1 + ( quantity / 10) * 0.1) : 0.5;
-                dis = (dis + (quantity / 100) * 0.1 - 0.8 < 0) ? (dis + (quantity / 100) * 0.1) :  0.8;
-                break;
-            case ShoppingCart.ITEM_FOR_SALE:
-                dis = 0.9;
+        if(item instanceof ItemRegular)
+            dis = (dis + (item.getQuantity() / 100) * 0.1 - 0.8 < 0) ? (dis + (item.getQuantity() / 100) * 0.1) :  0.8;
+
+        if(item instanceof ItemSecondFree){
+            dis = (((item.getQuantity() > 1) ? 1 : 0) * 0.5);
+            dis = (dis + (item.getQuantity() / 100) * 0.1 - 0.8 < 0) ? (dis + (item.getQuantity() / 100) * 0.1) :  0.8;
         }
+
+        if(item instanceof ItemDiscount){
+            dis = (0.1 + ( item.getQuantity() / 10) * 0.1 - 0.5 < 0) ? (0.1 + ( item.getQuantity() / 10) * 0.1) : 0.5;
+            dis = (dis + (item.getQuantity() / 100) * 0.1 - 0.8 < 0) ? (dis + (item.getQuantity() / 100) * 0.1) :  0.8;
+        }
+
+        if(item instanceof ItemSale)
+            dis = 0.9;
 
         do{
             rand = r.nextFloat();
@@ -54,20 +48,20 @@ public class DiscountInvalidTest {
         return 1.0 - rand;
     }
     @Parameterized.Parameters(name = "{index} : Type {0} : Quantity {1}")
-    public static Iterable<Object[]> dataForTest(){
-        return Arrays.asList(new Object[][]{
-                {ShoppingCart.ITEM_REGULAR},
-                {ShoppingCart.ITEM_FOR_SALE},
-                {ShoppingCart.ITEM_SECOND_FREE},
-                {ShoppingCart.ITEM_DISCOUNT},
-                {ShoppingCart.ITEM_REGULAR},
+    public static Iterable<Item[]> dataForTest(){
+        return Arrays.asList(new Item[][]{
+                {new ItemRegular("Item",5.00,1)},
+                {new ItemSale("Item",5.00,1)},
+                {new ItemSecondFree("Item",5.00,1)},
+                {new ItemDiscount("Item",5.00,1)},
+                {new ItemRegular("Item",5.00,1)},
         });
     }
 
     @Test
     public void calculateDiscount() {
-        cart.addItem("Item",5.00, quantity, type);
-        double discount = ShoppingCart.calculateDiscount((ShoppingCart.Item)cart.getItem());
+        double discount = item.getDiscount();
+        int quantity = item.getQuantity();
         assertFalse("Expected "+ expected + " but was got " + discount + " quantity: " + quantity,Math.abs(expected - discount) < 0.001);
     }
 }

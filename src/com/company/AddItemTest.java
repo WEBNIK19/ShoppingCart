@@ -33,51 +33,51 @@ public class AddItemTest {
         System.out.println("* ShoppingCartTest: addItem()");
         ShoppingCart cart = new ShoppingCart();
         try {
-            cart.addItem("",5.00,1, random.nextInt(4));
+            Item item = new ItemRegular("",5.00,1 + random.nextInt(999));
+            cart.addItem(item);
             fail("Expected an IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Illegal title"));
         }
         System.out.println("Short title illegal passed");
         try {
-            cart.addItem(randStr(1,32),0.00,1, random.nextInt(4));
+            Item item = new ItemSecondFree(randStr(1,32),0.00,1 + random.nextInt(999));
+            cart.addItem(item);
             fail("Expected an IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Illegal price"));
         }
         System.out.println("Low price illegal, correct title passed");
         try {
-            cart.addItem(randStr(1,32),random.nextFloat() * 1000,0, random.nextInt(4));
+            Item item = new ItemDiscount(randStr(1,32),random.nextFloat() * 1000,0);
+            cart.addItem(item);
             fail("Expected an IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Illegal quantity"));
         }
         System.out.println("Low quantity illegal, correct price and title passed");
         try {
-            cart.addItem(randStr(33,1024),random.nextFloat() * 1000,0, random.nextInt(4));
+            Item item = new ItemSale(randStr(33,1024),random.nextFloat() * 1000,1 + random.nextInt(999));
+            cart.addItem(item);
             fail("Expected an IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Illegal title"));
         }
         System.out.println("Long title illegal passed");
         try {
-            cart.addItem(randStr(1,32),random.nextFloat() * 1000,1000 + random.nextInt(1000),random.nextInt(4));
+            Item item = new ItemRegular(randStr(1,32),random.nextFloat() * 1000,1000 + random.nextInt(1000));
+            cart.addItem(item);
             fail("Expected an IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
             assertThat(e.getMessage(), is("Illegal quantity"));
         }
         System.out.println("High quantity illegal, correct price and title passed");
-        try {
-            cart.addItem(randStr(1,32),random.nextFloat() * 1000,1 + random.nextInt(1000),random.nextInt(10) + 4);
-            fail("Expected an IllegalArgumentException to be thrown");
-        } catch (IllegalArgumentException e) {
-            assertThat(e.getMessage(), is("Illegal type"));
-        }
-        System.out.println("Type illegal passed");
+
 
         try {
             for(int i = 0; i < 100; i++){
-                cart.addItem(randStr(1,32),random.nextFloat() * 1000,1 + random.nextInt(1000),random.nextInt(4));
+                Item item = new ItemRegular(randStr(1,32),random.nextFloat() * 1000,1 + random.nextInt(999));
+                cart.addItem(item);
             }
             fail("Expected an IndexOutOfBoundsException to be thrown");
         } catch (IndexOutOfBoundsException e) {
