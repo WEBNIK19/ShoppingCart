@@ -51,6 +51,10 @@ public class ShoppingCart
         item.type = type;
         items.add(item);
     }
+
+    public Object getItem(){
+        return items.get(items.size() - 1);
+    }
 /**
  * Formats shopping price.
  *
@@ -133,7 +137,7 @@ public String toString()
      * For ITEM_FOR_SALE discount is 90%
      * For each full 100 items item gets additional 10%, but not more than 80% total
      */
-    private static int calculateDiscount(Item item)
+    public static int calculateDiscount(Item item)
     {
         int discount = 0;
         switch (item.type) {
@@ -155,7 +159,7 @@ public String toString()
         return discount;
     }
     /** item info */
-    private static class Item
+    public static class Item
     {
         String title;
         double price;
